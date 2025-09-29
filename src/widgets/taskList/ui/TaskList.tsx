@@ -1,7 +1,7 @@
 import { FilterButton } from 'shared/ui/FilterButton';
 import { TaskCard } from 'entities/task/ui/TaskCard';
 import styles from './TaskList.module.css';
-import { useTasks } from '../model/useTasks';
+import { useTasks } from 'features/task-management/model/useTasks';
 
 export function TaskList() {
   const { tasks, filter, setFilter, removeTask } = useTasks();
