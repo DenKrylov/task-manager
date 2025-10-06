@@ -1,0 +1,19 @@
+.filterButton {
+  padding: 8px 16px;
+  border: 1px solid #007bff;
+  background-color: transparent;
+  color: #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterButton:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.filterButton.active {
+  background-color: #007bff;
+  color: white;
+}

@@ -1,0 +1,53 @@
+.taskCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+.taskCard:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.taskCard.completed {
+  background-color: #f8f9fa;
+  border-color: #d1e7dd;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title {
+  font-size: 16px;
+  color: #333;
+}
+
+.taskCard.completed .title {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.status {
+  font-size: 14px;
+}
+
+.removeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.removeButton:hover {
+  background-color: #f8f9fa;
+}
