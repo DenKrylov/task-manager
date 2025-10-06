@@ -4,14 +4,14 @@ import styles from './TaskCard.module.css';
 
 interface TaskCardProps {
   task: Task;
-  onRemove?: (id: string) => void;
+  onRemove?: (id: number) => void;
 }
 
 export const TaskCard = memo(function TaskCard({ task, onRemove }: TaskCardProps) {
   return (
     <div className={`${styles.taskCard} ${task.completed ? styles.completed : ''}`}>
       <div className={styles.content}>
-        <span className={styles.title}>{task.title}</span>
+        <span className={styles.title}>{task.todo}</span>
         <span className={styles.status}>
           {task.completed ? '✅' : '⏳'}
         </span>
