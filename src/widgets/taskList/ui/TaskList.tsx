@@ -4,13 +4,21 @@ import styles from './TaskList.module.css';
 import { useTasks } from 'features/task-management/model/useTasks';
 
 export function TaskList() {
-  const { tasks, filter, setFilter, removeTask } = useTasks();
+  const { tasks, filter, setFilter, removeTask, isLoading, error } = useTasks();
 
   const filters: Array<{ key: 'all' | 'completed' | 'incomplete'; label: string }> = [
     { key: 'all', label: 'Все' },
     { key: 'completed', label: 'Завершенные' },
     { key: 'incomplete', label: 'Незавершенные' },
   ];
+
+  if (isLoading) {
+    return <div className={styles.taskList}><p>Загрузка...</p></div>;
+  }
+
+  if (error) {
+    return <div className={styles.taskList}><p>Ошибка загрузки задач</p></div>;
+  }
 
   return (
     <div className={styles.taskList}>
